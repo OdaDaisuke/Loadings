@@ -2,7 +2,22 @@ $themeColor:;
 $themeColor2:;
 $accentColor:;
 
+// container
+$container-width:97%;
+$container-width-tb:90%;
+$container-width-pc:1024px;
+
 // background-color
 $bg:#fff;
-$bg_md:#fff;
-$bg_sm:#fff;
+$bg_tb:#fff;
+$bg_pc:#fff;
+
+// margin
+$m:1rem;
+$m-sm:.5rem;
+$m-lg:1.75rem;
+
+// padding
+$p:1rem;
+$p-sm:.5rem;
+$p-lg:1.75rem;
