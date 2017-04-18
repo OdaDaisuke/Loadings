@@ -1,0 +1,7 @@
+@mixin textLink() {
+  color:#000;
+  font-weight: bold;
+  &:hover {
+    color:#000;
+  }
+}
