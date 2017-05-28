@@ -10,6 +10,10 @@ body {
 	box-sizing:border-box;
 }
 img {
+	height:auto;
+	max-height: 100%;
+	max-width: 100%;
+	width:auto;
 	vertical-align:middle;
 }
 ul,ol {
@@ -18,10 +22,25 @@ ul,ol {
 	padding:0;
 }
 h1,h2,h3,h4,h5,h6 {
-	margin-top:1em;
-	margin-bottom:1em;
+	margin-top:0;
+	margin-bottom:1rem;
+}
+h1 {
+	font-size: 2.5rem;
+}
+h2 {
+	font-size:2rem;
+}
+h3 {
+	font-size:1.5rem;
 }
 p {
-	line-height:1.7;
+	line-height:1.75;
 	margin-top:0;
+}
+strong {
+}
+mark {
+}
+blockquote {
 }

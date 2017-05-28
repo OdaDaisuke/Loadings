@@ -1,0 +1,10 @@
+.container {
+  @if $type == md {
+    max-width:$container-max-width-md;
+    width:$container-width-md;
+  }
+  @if $type == pc {
+    max-width:$container-max-width-pc;
+    width:$container-width-pc;
+  }
+}

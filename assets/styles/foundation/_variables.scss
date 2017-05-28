@@ -1,11 +1,22 @@
-$themeColor:;
-$themeColor2:;
-$accentColor:;
+$themeColor:#fff;
+$themeColor2:#fff;
+$accentColor:#fff;
+
+// font size
+$font-size-base:1rem;
+
+// media type
+$type:sm md pc;
 
 // container
-$container-width:97%;
-$container-width-tb:90%;
-$container-width-pc:1024px;
+$container-width:95%;
+$container-max-width:95%;
+
+$container-width-md:90%;
+$container-max-width-md:90%;
+
+$container-width-pc:90%;
+$container-max-width-pc:1150px;
 
 // background-color
 $bg:#fff;

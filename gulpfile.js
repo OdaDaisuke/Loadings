@@ -1,29 +1,53 @@
 var gulp = require('gulp'),
-  gulpif = require('gulp-if'),
   sass = require('gulp-sass'),
   plumber = require('gulp-plumber'),
-  autoprefixer = require('gulp-autoprefixer')
+  autoprefixer = require('gulp-autoprefixer'),
+  sourcemaps = require('gulp-sourcemaps'),
+  browser = require('browser-sync'),
+  cssNano = require('gulp-cssnano')
 
 const path = {
   assets : './assets/',
   dist : './d/',
 }
 
-gulp.task('sass-transpile', () => {
-  gulp.src(path.assets + 'styles/style.scss')
+gulp.task('server', () => {
+  browser({
+    server : {
+      baseDir : "./"
+    }
+  })
+})
+
+function cssTranspile(srcPath, distDir) {
+  gulp.src(srcPath)
     .pipe(plumber())
-    .pipe(sass({
-      outputStyle: 'nested'
-    }))
+    .pipe(sourcemaps.init())
+    .pipe(sass())
     .pipe(autoprefixer())
-    .pipe(gulp.dest(path.dist + 'styles'))
+    .pipe(cssNano(), {
+      safe : true
+    })
+    .pipe(sourcemaps.write("./maps"))
+    .pipe(gulp.dest(distDir))
+    .pipe(browser.reload({
+      stream : true
+    }))
+}
+
+gulp.task('sass-transpile', () => {
+  cssTranspile(path.assets + 'styles/style.scss', path.dist + 'styles');
 })
 
 gulp.task('watch', () => {
   gulp.watch(path.assets + 'styles/**/*.scss', ['sass-transpile'])
 })
 
-gulp.task('default', () => {
+gulp.task('build', () => {
   gulp.start('sass-transpile')
+})
+
+gulp.task('default', ['server'], () => {
+  gulp.start('build')
   gulp.start('watch')
 })

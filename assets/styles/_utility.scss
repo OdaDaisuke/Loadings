@@ -56,3 +56,13 @@
 .block { display:block; }
 .flex { display:flex; }
 .dib { display:inline-block; }
+
+/*
+ * grid
+ */
+.row {
+  display: flex;
+  .col {
+    flex:1;
+  }
+}
