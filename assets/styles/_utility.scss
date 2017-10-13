@@ -58,6 +58,37 @@
 .dib { display:inline-block; }
 
 /*
+ * color
+ */
+.u-green {
+  background-color: #37A484;
+}
+.u-red {
+  background-color: #B43C3C;
+}
+.u-yellow {
+  background-color: #85A437;
+}
+.u-brown {
+  background-color: #B43C3C;
+}
+.u-black {
+  background-color: #1f1f1f;
+}
+.u-white {
+  background-color: #ffffff;
+}
+.u-grey {
+  background-color: #efefef;
+}
+.u-grey--stripe {
+  @extend .u-grey;
+  &:nth-child(even) {
+    background-color: #e0e0e0;
+  }
+}
+
+/*
  * grid
  */
 .row {
