@@ -23,12 +23,12 @@ ul,ol {
 	padding:0;
 }
 h1,h2,h3,h4,h5,h6 {
-	font-weight: lighter;
+	font-weight: bold;
 	margin-top:0;
 	margin-bottom:1rem;
 }
 h1 {
-	font-size: 3.5rem;
+	font-size: 3rem;
 }
 h2 {
 	font-size:2rem;
@@ -38,10 +38,11 @@ h3 {
 }
 a:link,
 a:visited {
-	color: #01019f;
+	color: #ff0f4f;
 }
 p {
-	line-height:1.75;
+	color: #cf0f4f;
+	line-height:1.55;
 	margin-top:0;
 }
 strong {
